@@ -1,9 +1,12 @@
 import React from "react";
-import "./Sidebar.css";
-function SidebarRow() {
+import "./SidebarRow.css";
+import { Avatar } from "@mui/material";
+function SidebarRow({ src, Icon, title }) {
   return (
     <div className="sidebar-row">
-      <h1>I am a row</h1>
+      {src && <Avatar src={src} />}
+      {Icon && <Icon />}
+      <h4>{title}</h4>
     </div>
   );
 }
